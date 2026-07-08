@@ -22,4 +22,8 @@ app.use(
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
+app.get("/", (req, res) => {
+  res.json({ status: "OK", message: "Backend API is running." });
+});
+
 export default app;
